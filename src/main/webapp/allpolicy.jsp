@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>University Enrollments</title>
+    <title>IAMCMI - Query Policy Information</title>
  
     <style>
         tr:first-child{
@@ -20,11 +21,14 @@
     <h2>List of Policy</h2>  
     <table>
         <tr>
-            <td>NAME</td><td>Joining Date</td><td>Salary</td><td>SSN</td><td></td>
+            <td>NAME</td>
+            <td>Joining Date</td>
+            <td>Salary</td>
+            <td>SSN</td>
         </tr>
         <c:forEach items="${policy}" var="policy">
             <tr>
-            <td>${policy.policyId}</td>
+            <td>${policy.id}</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
@@ -33,6 +37,6 @@
         
     </table>
     <br/>
-    <a href="<c:url value='/new' />">Add New Employee</a>
+    <a href="<c:url value='/index.jsp' />">Home</a>
 </body>
 </html>

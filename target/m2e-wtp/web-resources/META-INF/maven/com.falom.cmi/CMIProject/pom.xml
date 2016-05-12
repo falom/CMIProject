@@ -11,7 +11,7 @@
 	<properties>
 		<springframework.version>4.0.6.RELEASE</springframework.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
-		<mysql.connector.version>5.1.31</mysql.connector.version>
+		<mysql.connector.version>5.1.38</mysql.connector.version>
 		<joda-time.version>2.3</joda-time.version>
 		<testng.version>6.9.4</testng.version>
 		<mockito.version>1.10.19</mockito.version>
@@ -54,6 +54,12 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.2.6.RELEASE</version>
+		</dependency>
+		
 
 		<!-- Hibernate -->
 		<dependency>
@@ -113,6 +119,13 @@
 		</dependency>
 
 
+	<!-- Struts 2 -->
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>2.3.28.1</version>
+	</dependency>
+	
 		<!-- Testing dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -145,6 +158,11 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts</artifactId>
+			<version>1.2.9</version>
+		</dependency>
 	</dependencies>
 	<build>
 	<pluginManagement>

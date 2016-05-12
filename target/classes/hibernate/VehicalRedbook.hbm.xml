@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.webapp.iamcmi.hibernate.VehicalRedbook" 
+	table="VehicalRedbook" catalog="iamcmi">
+
+        <id name="vehIDPK" type="java.lang.Long">
+            <column name="VEH_Key" />
+            <generator class="identity" />
+        </id>
+        <property name="vehMakeName" type="string">
+            <column name="VEH_MakeName" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
