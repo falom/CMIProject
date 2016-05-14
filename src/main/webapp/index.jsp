@@ -17,8 +17,10 @@
 <body>
 <h2>Hello World! IAMCMI</h2>
 
-<a href="<c:url value='/allpolicy.jsp' />"> Query Policy Information</a><br/>
-<a href="<c:url value='/testConnection.jsp' />"> TestConnection</a><br/>
+<a href="<c:url value='/testConnection.jsp' />"> Test Connection</a><br/>
+<a href="<c:url value='/testBean.jsp' />"> Test Bean</a><br/>
+
+<a href="<c:url value='/queryPolicy.jsp' />"> Query Policy</a><br/>
 <a href="<c:url value='/queryRedbook.jsp' />"> Query Redbook</a><br/>
 <%
 out.println("Your IP address is " + request.getRemoteAddr());

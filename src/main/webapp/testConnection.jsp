@@ -43,13 +43,5 @@ java.sql.PreparedStatement pst;
 		if(s!=null) s.close();
 		if(connection!=null) connection.close();
 		}%>
-	
-<jsp:useBean id="ttest" class="com.webapp.iamcmi.tester.Test"></jsp:useBean>
-<jsp:setProperty name="ttest" 
-                    property="message" 
-                    value="Hello JSP..." />
-<jsp:getProperty name="ttest" property="message" />
-
-
 </body>
 </html>
