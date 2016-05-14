@@ -204,11 +204,6 @@
 					<configuration>
 						<source>1.7</source>
 						<target>1.7</target>
-						<!-- <archive>
-							<manifestEntries>
-								<Dependencies>org.slf4j</Dependencies>
-							</manifestEntries>
-						</archive> -->
 					</configuration>
 				</plugin>
 
