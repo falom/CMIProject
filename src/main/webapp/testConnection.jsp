@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
-<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%
@@ -24,24 +24,11 @@ java.sql.PreparedStatement pst;
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     connection = DriverManager.getConnection(connectionURL, "root", "root");
     if(!connection.isClosed()){
-        		String sql = "select * from VehicalRedbook";
-    			
-    			s = connection.createStatement();
-    			rs = s.executeQuery(sql);
-    			while( rs.next() ){
-    				%><table width="600" border="1"></table>
-    				<tr>
-    				<td><%= rs.getString("VEH_MakeName") %></td>
-    				<td><%= rs.getString("VEH_Model") %></td>
-    				
-    				</tr>
-    				</table>
-    				<%}
-    			
-    			
-    			if(rs!=null) rs.close();
-		if(s!=null) s.close();
-		if(connection!=null) connection.close();
-		}%>
+    	%><p>Connect database successfully!!</p><%
+    }
+    else
+    {
+    	%><p>Connection failed!!</p><%
+    }%>
 </body>
 </html>

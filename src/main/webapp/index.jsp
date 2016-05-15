@@ -23,9 +23,6 @@
 
 <a href="<c:url value='/queryPolicy.jsp' />"> Query Policy</a><br/>
 <a href="<c:url value='/queryRedbook.jsp' />"> Query Redbook</a><br/>
-<%
-out.println("Your IP address is " + request.getRemoteAddr());
-%>
 
 </body>
 </html>
