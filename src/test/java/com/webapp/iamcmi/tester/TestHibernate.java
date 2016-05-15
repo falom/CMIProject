@@ -1,9 +1,9 @@
 package com.webapp.iamcmi.tester;
 
 import org.hibernate.Session;  
-import org.hibernate.SessionFactory;  
-  
-import com.webapp.iamcmi.tester.HibernateUtil;
+import org.hibernate.SessionFactory;
+
+import com.webapp.iamcmi.hibernate.HibernateUtil;
 import com.webapp.iamcmi.hibernate.TestTable;
 
 public class TestHibernate {

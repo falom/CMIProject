@@ -19,6 +19,7 @@
 
 <a href="<c:url value='/testConnection.jsp' />"> Test Connection</a><br/>
 <a href="<c:url value='/testBean.jsp' />"> Test Bean</a><br/>
+<a href="<c:url value='/testStruts.jsp' />"> Test Struts</a><br/>
 
 <a href="<c:url value='/queryPolicy.jsp' />"> Query Policy</a><br/>
 <a href="<c:url value='/queryRedbook.jsp' />"> Query Redbook</a><br/>

@@ -1,5 +1,6 @@
 package com.webapp.iamcmi.hibernate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;  
 import javax.persistence.GeneratedValue;  
 import javax.persistence.Id;  
@@ -7,27 +8,30 @@ import javax.persistence.Table;
 
 //TestTable.hbm.xml
 @Entity
-@Table
+@Table(name="TestTable")
 public class TestTable {
 	@Id  
-    @GeneratedValue
+	@GeneratedValue
 	private int id;
-	
-	private String first; 
+
+	@Column(name="first")
+	private String first;
+
+	@Column(name="last")
 	private String last;   
 	private int age;
-	
+
 	public TestTable(){
-		
+
 	}
-	
+
 	public TestTable(int id, String first, String last, int age) {
 		this.id = id;
 		this.first = first;
 		this.last = last;
 		this.age = age;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -52,6 +56,6 @@ public class TestTable {
 	public void setAge(int age) {
 		this.age = age;
 	} 
-	
-	
+
+
 }
