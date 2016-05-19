@@ -1,7 +1,8 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
-<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%-- <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+ --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%

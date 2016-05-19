@@ -1,42 +1,61 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ page import="java.sql.*"%>
+<%@ page import="java.io.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%
+	java.sql.Connection con;
+	java.sql.Statement s;
+	java.sql.ResultSet rs;
+	java.sql.PreparedStatement pst;
+%>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>IAMCMI - Query Policy Information</title>
- 
-    <style>
-        tr:first-child{
-            font-weight: bold;
-            background-color: #C6C9C4;
-        }
-    </style>
- 
+<title>Connection with mysql database</title>
 </head>
- 
- 
 <body>
-    <h2>List of Policy</h2>  
-    <table>
-        <tr>
-            <td>NAME</td>
-            <td>Joining Date</td>
-            <td>Salary</td>
-            <td>SSN</td>
-        </tr>
-        <c:forEach items="${policy}" var="policy">
-            <tr>
-            <td>${policy.id}</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            </tr>
-        </c:forEach>
-        
-    </table>
-    <br/>
-    <a href="<c:url value='/index.jsp' />">Home</a>
+	<h1>Query Policy</h1>
+	<%
+		String connectionURL = "jdbc:mysql://localhost:8889/IAMCMIDB";
+		Connection connection = null;
+		Class.forName("com.mysql.jdbc.Driver").newInstance();
+		connection = DriverManager.getConnection(connectionURL, "root", "root");
+		if (!connection.isClosed()) {
+			String sql = "select * from Policy";
+
+			s = connection.createStatement();
+			rs = s.executeQuery(sql);
+	%>
+	<table border="1">
+		<tr>
+			<th>No.</th>
+			<th>Make Name</th>
+			<th>Model</th>
+		</tr>
+		<%
+			while (rs.next()) {
+		%>
+
+		<tr>
+			<td>No</td>
+			<td>?</td>
+			<td>?</td>
+		</tr>
+
+		<%
+			}
+		%>
+	</table>
+	<%
+		if (rs != null)
+				rs.close();
+			if (s != null)
+				s.close();
+			if (connection != null)
+				connection.close();
+		}
+	%>
+
 </body>
 </html>

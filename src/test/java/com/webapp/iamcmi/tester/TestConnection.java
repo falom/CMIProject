@@ -11,7 +11,6 @@ public class TestConnection {
 	static final String USER = "root";
 	static final String PASS = "root";
 
-	private String message = "No message specified";
 	private static String tableName = "";
 	private static String columnKey = "id";
 	private static String columnDesc = "test_desc";
@@ -30,13 +29,6 @@ public class TestConnection {
 		
 	}//end main
 	 
-	public String getMessage() {
-		return(message);
-	}
-	public void setMessage(String message) {
-		this.message = message;
-	}
-	
 	public String getTableName() {
 		return tableName;
 	}
@@ -119,6 +111,7 @@ public class TestConnection {
 		}//end try		
 	}//end testConnection method
 
+	@SuppressWarnings("resource")
 	public static void testCreateTable(String createDatabaseName){
 
 		Connection conn = null;

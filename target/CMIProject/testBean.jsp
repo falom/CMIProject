@@ -1,3 +1,7 @@
-<jsp:useBean id="ttest" class="com.webapp.iamcmi.tester.TestConnection"></jsp:useBean>
-<jsp:setProperty name="ttest" property="message" value="Hello JSP..." />
-<jsp:getProperty name="ttest" property="message" />
+<%@ page import="com.webapp.iamcmi.tester.*, java.util.*, java.io.*" %>
+<%-- <jsp:useBean id="a" class="com.webapp.iamcmi.tester.TestBean" scope="session"></jsp:useBean>
+ --%>
+ <%
+ com.webapp.iamcmi.tester.TestBean test = new com.webapp.iamcmi.tester.TestBean();
+out.println(test);
+%>
